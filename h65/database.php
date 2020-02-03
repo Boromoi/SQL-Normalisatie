@@ -30,7 +30,7 @@ class Database
     function __construct() {
         $error = null;
         try {
-            $dsn = 'mysql:host=127.0.0.1; dbname=sportvereniging';
+            $dsn = 'mysql:host=localhost; dbname=sportvereniging';
             $this->db = new PDO($dsn, 'sportvereniging', 'sport', array(PDO::ATTR_PERSISTENT => true));
             $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //SQL maakt gebruik via PDO van try en catch in PHP
         } catch (Exception $e) {

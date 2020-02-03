@@ -5,7 +5,7 @@
  * Date: 22-05-17
  * Time: 09:52
  */
-require_once('classes/database.php');
+require_once('database.php');
 
 $db = new Database();
 $commissies =$db->getCommissies();
@@ -33,7 +33,7 @@ Commissie: <select name="commissie" onchange="updateValue(this.value)">
         <?php
         while($row = $commissies->fetch()) {
         ?>
-    <option value='<?php echo $row[commissieid].'\'>'. $row[commissienaam] ?>
+    <option value='<?php echo $row["commissieid"].'\'>'. $row["commissienaam"] ?>
             </option>
         <?php } ?>
     </select>

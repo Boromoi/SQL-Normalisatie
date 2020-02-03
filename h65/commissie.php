@@ -1,7 +1,7 @@
 <?php
 
 $commissie = $_GET['commissie'];
-require_once('classes/database.php');
+require_once('database.php');
 
 $db = new Database();
 $aantal = $db->getAantal($commissie);
