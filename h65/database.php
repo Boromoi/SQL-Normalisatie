@@ -31,7 +31,7 @@ class Database
         $error = null;
         try {
             $dsn = 'mysql:host=localhost; dbname=sportvereniging';
-            $this->db = new PDO($dsn, 'sportvereniging', 'sport', array(PDO::ATTR_PERSISTENT => true));
+            $this->db = new PDO($dsn, 'root', 'sans', array(PDO::ATTR_PERSISTENT => true));
             $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //SQL maakt gebruik via PDO van try en catch in PHP
         } catch (Exception $e) {
             $this->error = $e->getMessage();
