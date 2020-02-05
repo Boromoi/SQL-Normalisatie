@@ -36,8 +36,8 @@ else {
         while($row = $result->fetch()) {
             ?>
             <tr>
-                <td><?php echo $row[naam] ?></td>
-                <td><?php echo $row[telefoon] ?></td>
+                <td><?php echo $row['naam'] ?></td>
+                <td><?php echo $row['telefoon'] ?></td>
             </tr>
         <?php } ?>
         <tr>
